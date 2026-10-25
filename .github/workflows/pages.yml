@@ -16,8 +16,8 @@ concurrency:
 
 jobs:
   publish:
-    # Publishes from the repository's default branch only.
-    if: github.ref_name == github.event.repository.default_branch
+    # Publishes from main only.
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -64,7 +64,7 @@ All figures come from an illustrative ship-repair scenario in the product's engi
 
 ## Publishing
 
-Every push to the default branch that touches `site/` runs [`.github/workflows/pages.yml`](.github/workflows/pages.yml): the disclosure check, then deployment to GitHub Pages. One-time setting: **Settings → Pages → Source: GitHub Actions**.
+Every push to `main` that touches `site/` runs [`.github/workflows/pages.yml`](.github/workflows/pages.yml): the disclosure check, then deployment to GitHub Pages. One-time setting: **Settings → Pages → Source: GitHub Actions**.
 
 After changing the deck, refresh the PDF backup with `node scripts/export-pdf.cjs`.
 
