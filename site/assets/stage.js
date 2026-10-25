@@ -1,4 +1,4 @@
-// The single living world behind every slide: particles, the ValueGram monitor and scene drawing.
+// The single living world behind every slide: particles, the value monitor and scene drawing.
 (() => {
   const W = 1920, H = 1080;
   const canvas = document.getElementById('stage');
@@ -86,7 +86,7 @@
     startBlend(p, 1.6, 0.6);
   }
 
-  // ---------- the ValueGram monitor ----------
+  // ---------- the value monitor ----------
   const M = {
     on: false, al: 0, x: 120, y: 880, w: 1680, h: 120, full: false,
     amp: 0, ampT: 0, gold: 0, n: 520, buf: new Float32Array(520), head: 0, acc: 0,

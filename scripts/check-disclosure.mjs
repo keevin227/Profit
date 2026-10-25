@@ -8,7 +8,7 @@ const FORBIDDEN = [
   /mathjs/i, /numpy/i, /typescript/i, /\bzod\b/i, /gapgpt/i, /openrouter/i, /\bgpt-/i, /claude-/i,
   /drydock/i, /maritime/i, /shadow price/i, /dual value/i, /bisection/i, /holt/i, /winters/i,
   /\bCRPS\b/, /\bBrier\b/i, /\bMASE\b/, /scoringrules/i, /webassembly/i, /sha-?256/i, /tickup/i,
-  /\bL[0-4]\b/, /runProfitEngine/, /brainAnalyst/, /profit-lab/i, /\bpack\b/i, /0\.001/
+  /\bL[0-4]\b/, /valuegram/i, /runProfitEngine/, /brainAnalyst/, /profit-lab/i, /\bpack\b/i, /0\.001/
 ];
 
 const files = [];

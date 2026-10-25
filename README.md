@@ -1,9 +1,9 @@
-# ValueGram Profit
+# Profit Algorithm
 
-**Activity is gray. Value is gold.** A 14-scene animated presentation of the ValueGram Profit algorithm: what every decision is worth before you choose, and what it delivered afterward.
+**Activity is gray. Value is gold.** A 14-scene animated presentation of the Profit Algorithm: what every decision is worth before you choose, and what it delivered afterward.
 
 - **Live presentation:** https://keevin227.github.io/Profit/
-- **PDF backup:** [site/ValueGram-Profit.pdf](site/ValueGram-Profit.pdf)
+- **PDF backup:** [site/Profit-Algorithm.pdf](site/Profit-Algorithm.pdf)
 - **Concept and plan:** [docs/VISUAL-CONCEPT-AND-PLAN.md](docs/VISUAL-CONCEPT-AND-PLAN.md)
 
 ## The idea
@@ -16,7 +16,7 @@ The deck is one continuous living world, not a set of slides. One visual rule ru
 | Gates | Limits on the business; the glowing one is the binding limit |
 | Hollow gold | Modeled value, expected but not yet proven |
 | Solid gold | Proven value, recorded in the books |
-| The ValueGram line | The business's economic heartbeat: flat means no value created |
+| The heartbeat line | The business's economic heartbeat: flat means no value created |
 | Ice blue | The instruments (AI and statistics), never the money |
 
 ## Presenting
@@ -46,7 +46,7 @@ cd site && python3 -m http.server 8000   # open http://localhost:8000
 site/                    the deck (plain HTML, CSS, JS; no build step)
   index.html             14 scenes, on-screen text and speaker notes
   presenter.html         presenter view
-  assets/stage.js        the living canvas: particles, the ValueGram monitor
+  assets/stage.js        the living canvas: particles, the value monitor
   assets/scenes.js       one animated scene per slide
   assets/keyframes.js    illustrative output values only
   assets/deck.js         navigation, steps, deep links, presenter sync

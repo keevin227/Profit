@@ -6,7 +6,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const SITE = path.join(__dirname, '..', 'site');
-const OUT = path.resolve(process.argv[2] || path.join(SITE, 'ValueGram-Profit.pdf'));
+const OUT = path.resolve(process.argv[2] || path.join(SITE, 'Profit-Algorithm.pdf'));
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
 // [slide, step, wait ms]: the moments worth a page
 const SHOTS = [[1,0,3200],[2,1,4200],[2,2,4200],[3,1,3200],[4,0,3500],[4,1,3500],[4,2,3500],[4,3,3500],[4,4,3500],[5,0,9500],[5,1,9500],
