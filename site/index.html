@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ValueGram Profit</title>
+<meta name="description" content="Activity is gray. Value is gold. ValueGram Profit shows what every decision is worth before you choose, and proves what it delivered.">
+<meta name="theme-color" content="#06070a">
+<meta property="og:title" content="ValueGram Profit">
+<meta property="og:description" content="Every decision has a price. See it before you choose.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<canvas id="stage" aria-hidden="true"></canvas>
+
+<main class="frame" aria-live="polite">
+
+<!-- 01 ─────────────────────────────────────────── -->
+<section class="slide s-title" data-scene="title" data-title="ValueGram Profit">
+  <div class="center">
+    <div class="kicker">Introducing</div>
+    <h1 class="h1">ValueGram <em>Profit</em></h1>
+  </div>
+  <div class="tagline">Every decision has a price. <b>See it before you choose.</b></div>
+  <div class="hint">Press → to begin</div>
+  <aside class="notes">Every organization spends time, money and attention. It sees the cost of all three and almost never the return. Let the line pulse for a moment before speaking: that line is the ValueGram, the economic heartbeat of a business. Keep it in mind; it will tell us the truth all the way through.</aside>
+</section>
+
+<!-- 02 ─────────────────────────────────────────── -->
+<section class="slide s-blind" data-scene="blind" data-steps="2" data-title="The blind spot">
+  <div class="stack" style="left:120px; top:90px; width:1680px;">
+    <div data-only="0"><div class="kicker">The blind spot</div><h2 class="h2">Organizations measure <span class="gr">what got done.</span></h2></div>
+    <div data-only="1"><div class="kicker">The blind spot</div><h2 class="h2">Plan delivered: <span class="gr">100%.</span> Profit change: <span class="g">$0.</span></h2></div>
+    <div data-only="2"><h2 class="h2 xl">Activity is gray. <span class="g">Value is gold.</span></h2><p class="sub" style="max-width:1100px">Everything you are about to see follows one rule. Gray is effort. Gold is economic value. Only one of them shows up in profit.</p></div>
+  </div>
+  <div class="tiles">
+    <div class="tile" data-x="210" data-y="300" style="left:210px;top:300px"><div class="t">Process redesign</div><div class="st">Done</div></div>
+    <div class="tile" data-x="464" data-y="300" style="left:464px;top:300px"><div class="t">New KPI dashboard</div><div class="st">Done</div></div>
+    <div class="tile" data-x="718" data-y="300" style="left:718px;top:300px"><div class="t">Approvals sprint</div><div class="st">Done</div></div>
+    <div class="tile" data-x="972" data-y="300" style="left:972px;top:300px"><div class="t">Vendor review</div><div class="st">Done</div></div>
+    <div class="tile" data-x="1226" data-y="300" style="left:1226px;top:300px"><div class="t">Training program</div><div class="st">Done</div></div>
+    <div class="tile" data-x="1480" data-y="300" style="left:1480px;top:300px"><div class="t">CRM cleanup</div><div class="st">Done</div></div>
+    <div class="tile" data-x="210" data-y="428" style="left:210px;top:428px"><div class="t">Weekly reporting</div><div class="st">Done</div></div>
+    <div class="tile" data-x="464" data-y="428" style="left:464px;top:428px"><div class="t">Hiring plan</div><div class="st">Done</div></div>
+    <div class="tile" data-x="718" data-y="428" style="left:718px;top:428px"><div class="t">Cost review</div><div class="st">Done</div></div>
+    <div class="tile" data-x="972" data-y="428" style="left:972px;top:428px"><div class="t">Quality audit</div><div class="st">Done</div></div>
+    <div class="tile" data-x="1226" data-y="428" style="left:1226px;top:428px"><div class="t">Customer survey</div><div class="st">Done</div></div>
+    <div class="tile" data-x="1480" data-y="428" style="left:1480px;top:428px"><div class="t">Tooling upgrade</div><div class="st">Done</div></div>
+    <div class="tile" data-x="210" data-y="556" style="left:210px;top:556px"><div class="t">Policy update</div><div class="st">Done</div></div>
+    <div class="tile" data-x="464" data-y="556" style="left:464px;top:556px"><div class="t">Pricing study</div><div class="st">Done</div></div>
+    <div class="tile" data-x="718" data-y="556" style="left:718px;top:556px"><div class="t">Data migration</div><div class="st">Done</div></div>
+    <div class="tile" data-x="972" data-y="556" style="left:972px;top:556px"><div class="t">Safety drill</div><div class="st">Done</div></div>
+    <div class="tile" data-x="1226" data-y="556" style="left:1226px;top:556px"><div class="t">Capacity study</div><div class="st">Done</div></div>
+    <div class="tile" data-x="1480" data-y="556" style="left:1480px;top:556px"><div class="t">Board deck</div><div class="st">Done</div></div>
+  </div>
+  <div class="readout" style="left:210px; top:700px;"><div class="lbl">Plan delivered</div><div class="big gr" id="b-pct">0%</div></div>
+  <div class="readout" style="left:1310px; top:700px; width:400px; text-align:right;"><div class="lbl">Profit change</div><div class="big g">$0</div></div>
+  <aside class="notes">Step 0: watch the plan complete. Every dashboard in the company would celebrate this. Step 1: the plan is 100% delivered, and the economic heartbeat is flat. Completion tells you something happened; it does not tell you it mattered. Remember the "Approvals sprint" tile. Step 2: introduce the rule of the whole presentation: activity is gray, value is gold.</aside>
+</section>
+
+<!-- 03 ─────────────────────────────────────────── -->
+<section class="slide s-case" data-scene="case" data-steps="1" data-title="Goals become economic cases">
+  <div class="stack" style="left:120px; top:80px; width:1400px;">
+    <div data-only="0"><div class="kicker">The shift</div><h2 class="h2">Today, a goal is <span class="gr">a target.</span></h2></div>
+    <div data-only="1"><div class="kicker">The shift</div><h2 class="h2">Tomorrow, it is <span class="g">an economic case.</span></h2></div>
+  </div>
+  <div class="tags"><span class="tag">Live</span></div>
+  <div class="card goal"><div class="lbl">Goal</div><div class="val">Raise utilization to 82%</div></div>
+  <div class="card facet gold" data-from="1" style="left:140px; top:300px; --d:0.2s"><div class="lbl">Value</div><div class="val"><span class="g">+$29,200</span> a year per point</div></div>
+  <div class="card facet" data-from="1" style="left:1340px; top:300px; --d:0.45s"><div class="lbl">Depends on</div><div class="val">Faster approvals</div></div>
+  <div class="card facet" data-from="1" style="left:140px; top:740px; --d:0.7s"><div class="lbl">Stops paying at</div><div class="val">79% on its own</div></div>
+  <div class="card facet" data-from="1" style="left:1340px; top:740px; --d:0.95s"><div class="lbl">Evidence</div><div class="val">System records · strong</div></div>
+  <aside class="notes">A goal on its own is a number to hit. In ValueGram it arrives with its economic case: what the next improvement is worth, what it depends on, where it stops paying, and how strong the evidence is. Note the hollow gold: this is modeled value, not yet proven. Supporting goals that carry no direct dollar value are classified as enablers instead of being given a made-up price.</aside>
+</section>
+
+<!-- 04 ─────────────────────────────────────────── -->
+<section class="slide s-flow" data-scene="flow" data-steps="4" data-title="The reveal">
+  <div class="stack" style="left:120px; top:80px; width:1020px;">
+    <div data-only="0"><div class="kicker">The constraint</div><h2 class="h2">Value lives at <span class="g">the constraint.</span></h2><p class="sub">Work flows through every limit in the business. Only the narrowest one decides what becomes profit.</p></div>
+    <div data-only="1"><div class="kicker">Change one</div><h2 class="h2">Raise utilization<br><span class="m">77% → 82%</span></h2></div>
+    <div data-only="2"><div class="kicker">Change two</div><h2 class="h2">Cut approval time<br><span class="m">37 → 20 days</span></h2><p class="sub">On its own, nothing turns gold.</p></div>
+    <div data-only="3"><div class="kicker">Both together</div><h2 class="h2">Now move <span class="g">both at once.</span></h2></div>
+    <div data-only="4"><div class="kicker">The interaction</div><h2 class="h2 sm"><span class="g">$61,200</span> exists only when they move together.</h2><p class="sub">A zero doesn't mean worthless. It means <em class="serif" style="font-size:34px">not yet</em>. Remember the approvals sprint that changed nothing? This is where it pays.</p></div>
+  </div>
+  <div class="results">
+    <div class="head" data-from="1">Added operating profit per year · modeled</div>
+    <div class="row" data-from="1"><span class="k">Utilization alone</span><span class="v" id="rv1">$58,400</span></div>
+    <div class="row" data-from="2"><span class="k">Approvals alone</span><span class="v gr">$0</span></div>
+    <div class="row total" data-from="3"><span class="k">Both together</span><span class="v" id="rv3">$119,600</span></div>
+    <div class="bars" data-from="4">
+      <div class="bar"><i class="sum"></i><b>Sum of the parts · $58,400</b></div>
+      <div class="bar"><i class="tot"></i><i class="gap"></i><b>Together · $119,600</b></div>
+    </div>
+  </div>
+  <div class="flowlbl" style="left:120px">Requested work</div>
+  <div class="gatelbl" id="gl-a" style="left:760px">Approvals<span class="chip">Binding limit</span></div>
+  <div class="gatelbl" id="gl-b" style="left:1200px">Capacity<span class="chip">Binding limit</span></div>
+  <div class="flowlbl g" style="left:1660px">Profit</div>
+  <div class="monlbl" style="left:120px; top:878px;">Added value</div>
+  <div class="disclose">Illustrative ship-repair scenario from the product's engine tests · Modeled annual uplift, not a customer result · Implementation costs not included</div>
+  <aside class="notes">Step 0: work flows left to right through two limits, approvals and capacity. The glowing gate is the one that binds. Only work that passes it turns gold. Step 1: raise utilization from 77% to 82%: more gold, the heartbeat starts, $58,400 a year, and the binding limit moves to approvals. Step 2: back to today, and instead cut approvals from 37 to 20 days. More work gets through the first gate and piles up at capacity. Nothing new turns gold. Flatline. Pause here; let the silence work. Step 3: move both: $119,600. Step 4: $61,200 of that exists only in the combination. A spreadsheet would have cut the approvals project. The engine shows it is the key that unlocks the other. The decision is to coordinate the two teams, not to defund one of them.</aside>
+</section>
+
+<!-- 05 ─────────────────────────────────────────── -->
+<section class="slide s-knee" data-scene="knee" data-steps="1" data-title="The stopping point">
+  <div class="abs" style="left:120px; top:80px; width:600px;">
+    <div class="kicker">Live model</div>
+    <h2 class="h2 sm">Every improvement has a <span class="g">stopping point.</span></h2>
+  </div>
+  <div class="stack" style="left:120px; top:360px; width:580px;">
+    <p class="sub" data-only="0" style="margin:0">On its own, utilization pays until approvals become the limit.</p>
+    <p class="sub" data-only="1" style="margin:0">Speed up approvals as well, and the stopping point moves.</p>
+  </div>
+  <div class="readouts">
+    <div><div class="lbl">Utilization</div><div class="v" id="k-u">77.0%</div></div>
+    <div><div class="lbl">Approval time</div><div class="v" id="k-a">37 days</div></div>
+    <div><div class="lbl">Added profit / year</div><div class="v g" id="k-v">$0</div></div>
+    <div><div class="lbl">Next point worth</div><div class="v" id="k-n">$29,200</div></div>
+  </div>
+  <div class="keys"><kbd>↑</kbd><kbd>↓</kbd> drive utilization &nbsp; <kbd>A</kbd> toggle approvals</div>
+  <div class="disclose">Same illustrative scenario · Modeled annual uplift · Implementation costs not included</div>
+  <aside class="notes">This is live: drive utilization with the up and down arrows. Each point is worth $29,200 a year until 79%. Past that, approvals become the limit and the gold turns gray: more effort, no more value. Step 1 (or press A): with faster approvals the stopping point moves to 81.1%. This is why the system suggests targets: a target beyond its stopping point spends effort that returns nothing.</aside>
+</section>
+
+<!-- 06 ─────────────────────────────────────────── -->
+<section class="slide s-deal" data-scene="deal" data-steps="2" data-title="Deal Desk">
+  <div class="abs" style="left:120px; top:80px; width:1680px;">
+    <div class="kicker">Deal Desk</div>
+    <h2 class="h2">A good margin can still be <span class="g">a bad deal.</span></h2>
+  </div>
+  <div class="tags"><span class="tag">Live</span></div>
+  <div class="abs small" style="left:360px; top:340px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600">Capacity · full</div>
+  <div class="abs small" data-only="0" style="left:140px; top:340px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; color:var(--ink-2)">New deal</div>
+  <div class="abs small" data-from="1" style="left:1190px; top:960px; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; --d:1.2s">Displaced business</div>
+  <div class="gauge-l" id="g-var" style="top:700px">Variable cost</div>
+  <div class="gauge-l" data-from="1" style="top:430px; color:var(--gold)">Modeled price floor</div>
+  <div class="gauge-l" id="g-price" style="top:540px"><span>Deal price</span>
+    <b data-only="0">Margin looks good</b><b data-only="1">Below the floor</b><b data-only="2" style="color:var(--gold)">Above the floor</b>
+  </div>
+  <div class="stack" style="left:120px; top:880px; width:1000px;">
+    <p class="h2 sm" data-only="0" style="font-size:40px">A new deal arrives. <span class="m">The margin looks good.</span></p>
+    <p class="h2 sm" data-only="1" style="font-size:40px">Capacity is full. <span class="m">It pushes out business you already had.</span></p>
+    <p class="h2 sm" data-only="2" style="font-size:40px">Priced for what it displaces, <span class="g">it creates value.</span></p>
+  </div>
+  <aside class="notes">Every deal consumes capacity. With idle capacity nothing is displaced and the floor sits near variable cost. When capacity is full, the deal pushes out existing business, and it must pay for what it displaces. Deal Desk returns the modeled price floor and the incremental value: what the business gains, net of what it gives up.</aside>
+</section>
+
+<!-- 07 ─────────────────────────────────────────── -->
+<section class="slide s-monday" data-scene="monday" data-steps="1" data-title="Monday morning">
+  <div class="abs" style="left:120px; top:80px; width:900px;">
+    <div class="kicker">Monday List</div>
+    <h2 class="h2">Monday morning.<br><span class="g">An agenda written in dollars.</span></h2>
+  </div>
+  <div class="agenda">
+    <div class="item" data-from="0" style="--d:0.3s"><span class="n">1</span><div><div class="t">Coordinate approvals and capacity</div><span class="c g">$2,300 a week at stake</span></div></div>
+    <div class="item" data-from="0" style="--d:0.6s"><span class="n">2</span><div><div class="t">A deal is waiting below its price floor</div><span class="c">Decision pending</span></div></div>
+    <div class="item" data-from="0" style="--d:0.9s"><span class="n">3</span><div><div class="t">Contribution per day rests on an estimate</div><span class="c">Verify before committing</span></div></div>
+  </div>
+  <div class="abs small" style="left:120px; top:830px; width:820px">The weekly figure is an urgency signal derived from modeled annual value, not a cash forecast.</div>
+  <div class="role" data-from="1" style="left:1400px; top:220px; --d:0.1s"><div class="r">CEO</div><div class="q">Where should attention go?</div></div>
+  <div class="role" data-from="1" style="left:1723px; top:455px; --d:0.25s"><div class="r">CFO</div><div class="q">Which assumptions hold the value?</div></div>
+  <div class="role" data-from="1" style="left:1600px; top:845px; --d:0.4s"><div class="r">COO</div><div class="q">Which constraint comes next?</div></div>
+  <div class="role" data-from="1" style="left:1200px; top:845px; --d:0.55s"><div class="r">Commercial</div><div class="q">Which deals use capacity best?</div></div>
+  <div class="role" data-from="1" style="left:1077px; top:455px; --d:0.7s"><div class="r">Strategy</div><div class="q">Which goals depend on each other?</div></div>
+  <div class="abs" data-from="1" style="left:1040px; top:950px; width:720px; text-align:center; --d:0.9s"><p class="serif" style="font-size:34px; color:var(--ink-2)">One economic language across <span class="g">the leadership table.</span></p></div>
+  <aside class="notes">The Monday List turns the model into a management agenda: which constraint to address, which decision is waiting and what waiting costs, and which uncertain number could change the answer. Step 1: every leader asks a different question of the same economics. People will still disagree, but now about visible assumptions instead of opinions.</aside>
+</section>
+
+<!-- 08 ─────────────────────────────────────────── -->
+<section class="slide s-ask" data-scene="ask" data-steps="2" data-title="Ask the engine">
+  <div class="abs" style="left:120px; top:80px; width:1680px;">
+    <div class="kicker ice">Ask in plain language</div>
+    <h2 class="h2">The engine calculates. The AI explains. <span class="g">Leaders decide.</span></h2>
+  </div>
+  <div class="tags"><span class="tag">Live</span></div>
+  <div class="bubble" id="ask-q"></div>
+  <div class="chipx" data-from="0" style="left:890px; top:440px; --d:2.1s">approval time → 20 days</div>
+  <div class="node-l" style="left:720px; top:640px">Grounded<br>context</div>
+  <div class="node-l" style="left:1060px; top:660px">Financial<br>engine</div>
+  <div class="node-l" style="left:1290px; top:640px">Validation</div>
+  <div class="card answer gold" data-from="0" style="--d:3.4s">
+    <div class="lbl">Answer</div>
+    <div class="val">On its own: <b>$0</b>. Capacity is still the limit.<br>With utilization at 82%: <b class="g">+$119,600 a year</b>, modeled.</div>
+    <div class="src">Recalculated by the engine · just now</div>
+  </div>
+  <div class="reject" data-from="1">$240,000</div>
+  <div class="approve" data-from="2"><span class="small" style="color:var(--ink-2); font-size:20px">Proposed plan · 4 tasks on the goal</span><span class="btn">Approve</span></div>
+  <div class="stack" style="left:120px; top:880px; width:1100px;">
+    <p class="h2 sm" data-only="0" style="font-size:40px">The question becomes a precise scenario. <span class="m">The engine recalculates it.</span></p>
+    <p class="h2 sm" data-only="1" style="font-size:40px">No number without a source. <span class="m">Unsupported figures are stopped.</span></p>
+    <p class="h2 sm" data-only="2" style="font-size:40px">Nothing changes until <span class="g">a person approves.</span></p>
+  </div>
+  <aside class="notes">The AI does not invent the economics. It turns a plain-language question into a structured change, the financial engine recomputes the scenario, and the AI explains the computed result with its source. Step 1: a figure that was never computed is stopped at validation. Validation catches unsupported figures; it does not guarantee every sentence is right, which is why number and source are always shown together. Step 2: the same facts feed proposed task plans, and a person approves before anything is created.</aside>
+</section>
+
+<!-- 09 ─────────────────────────────────────────── -->
+<section class="slide s-ledger" data-scene="ledger" data-steps="1" data-title="Value Ledger">
+  <div class="stack" style="left:120px; top:80px; width:1680px;">
+    <div data-only="0"><div class="kicker">Value Ledger</div><h2 class="h2">Forecasts promise. <span class="g">The ledger keeps score.</span></h2></div>
+    <div data-only="1"><div class="kicker">Value Ledger</div><h2 class="h2">Three initiatives. One recorded gain. <span class="g">No double counting.</span></h2></div>
+  </div>
+  <div class="tags"><span class="tag">Live</span></div>
+  <div data-only="0">
+    <div class="station" style="left:220px; top:620px">Candidate<small>Proposed improvement</small></div>
+    <div class="station" style="left:600px; top:620px">Baseline<small>Starting point locked</small></div>
+    <div class="station" style="left:980px; top:620px">Proving<small>Evidence accumulating</small></div>
+    <div class="station" style="left:1500px; top:340px; color:var(--gold)">Proven<small>Recorded in the books</small></div>
+    <div class="station" style="left:1500px; top:760px; color:var(--red)">Missed<small>Expectation not met</small></div>
+    <div class="disclose">"Proven" means the improvement passed the product's evaluation criteria. Demonstration entries are always kept apart from real ones.</div>
+  </div>
+  <div data-only="1">
+    <div class="station" style="left:520px; top:236px">Initiative A</div>
+    <div class="station" style="left:960px; top:226px">Initiative B</div>
+    <div class="station" style="left:1400px; top:236px">Initiative C</div>
+    <div class="abs small" style="left:1205px; top:533px; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; color:var(--gold)">Recorded profit improvement</div>
+    <div class="abs" style="left:1205px; top:650px; width:520px"><p class="serif" style="font-size:34px; line-height:1.3; color:var(--ink-2)">Credited value can never exceed what the books recorded.</p></div>
+  </div>
+  <aside class="notes">Step 0: every improvement travels the same track. The baseline locks the starting point before work begins; recorded financial results then test the claim. Hollow gold becomes solid gold only when it is proven; some improvements miss, and the ledger says so. Step 1: three initiatives claim the same gain. The vessel is sized to what the books recorded; everything above it evaporates. "Proven" is the product's evaluation status, not a claim of universal causal proof.</aside>
+</section>
+
+<!-- 10 ─────────────────────────────────────────── -->
+<section class="slide s-arch" data-scene="arch" data-steps="5" data-title="Under the hood">
+  <div class="stack" style="left:1080px; top:110px; width:720px;">
+    <div data-only="0">
+      <div class="kicker">Under the hood</div>
+      <h2 class="h2">Five disciplines.<br><span class="g">One decision architecture.</span></h2>
+      <p class="sub">Data in. Economics computed. Decisions explained. Outcomes measured, and fed back into the evidence.</p>
+    </div>
+    <div class="panel" data-only="1" style="position:absolute; left:0; top:0">
+      <div class="num-k">01 / 05</div><div class="kicker">Evidence and data</div><h3 class="h2 sm">Every number has a history.</h3>
+      <ul><li>Append-only record of every observation</li><li>Five grades of evidence on every input</li><li>Fingerprinted, versioned, reproducible runs</li><li>Beliefs, predictions, decisions and outcomes stored together</li><li>Permissioned access for external AI agents</li></ul>
+      <span class="tag">Live</span>
+    </div>
+    <div class="panel" data-only="2" style="position:absolute; left:0; top:0">
+      <div class="num-k">02 / 05</div><div class="kicker">Financial modeling</div><h3 class="h2 sm">How operations become profit.</h3>
+      <ul><li>Versioned industry models of how money is made</li><li>Explicit drivers, limits, currency and period</li><li>Dependency-ordered evaluation with integrity checks</li><li>Opportunity cost of every commitment</li><li>Reconciliation against the accounting books</li></ul>
+      <span class="tag">Live</span>
+    </div>
+    <div class="panel" data-only="3" style="position:absolute; left:0; top:0">
+      <div class="num-k">03 / 05</div><div class="kicker">Mathematical optimization</div><h3 class="h2 sm">The best feasible move, priced.</h3>
+      <ul><li>Constrained optimization of the operating plan</li><li>Marginal value of every scarce resource</li><li>Detection of where the bottleneck moves next</li><li>Interaction value across connected goals</li><li>Full re-solve at every target, never a straight-line guess</li></ul>
+      <span class="tag">Live</span>
+    </div>
+    <div class="panel ice" data-only="4" style="position:absolute; left:0; top:0">
+      <div class="num-k">04 / 05</div><div class="kicker ice">Statistics</div><h3 class="h2 sm">It scores its own predictions.</h3>
+      <ul><li>Forecasts must beat a simple seasonal benchmark</li><li>Ranges, not points: quantile forecast bands</li><li>Calibration: accuracy, bias and coverage</li><li>Impact measured against the pre-change pattern</li><li>Placebo and stress tests on every impact claim</li></ul>
+      <span class="tag">Live</span> <span class="tag opt">Optional layer</span>
+    </div>
+    <div class="panel ice" data-only="5" style="position:absolute; left:0; top:0">
+      <div class="num-k">05 / 05</div><div class="kicker ice">Artificial intelligence</div><h3 class="h2 sm">Explains. Never invents.</h3>
+      <ul><li>Grounded in the organization's goals and links</li><li>Plain language turned into structured scenarios</li><li>Answers checked for structure, sources and figures</li><li>Value-aware drafting of task plans</li><li>A person approves before anything changes</li></ul>
+      <span class="tag">Live</span>
+    </div>
+  </div>
+  <aside class="notes">Each discipline answers a different part of the management question, and the value is in how they connect: question, computed scenario, decision, measured outcome, back into evidence. These are established techniques; we don't claim to have invented them. What is new is wiring them to enterprise goals, deals, evidence and outcome evaluation. Results hold within the stated business model. The statistics layer runs as an optional service; when it is offline, the core profit engine keeps working.</aside>
+</section>
+
+<!-- 11 ─────────────────────────────────────────── -->
+<section class="slide s-proof" data-scene="proof" data-steps="1" data-title="Statistical proof">
+  <div class="stack" style="left:120px; top:80px; width:1300px;">
+    <div data-only="0"><div class="kicker ice">Statistics</div><h2 class="h2">Every forecast must <span class="g">beat the simple answer.</span></h2></div>
+    <div data-only="1"><div class="kicker ice">Statistics</div><h2 class="h2">Every impact claim must <span class="g">survive an attack.</span></h2></div>
+  </div>
+  <div class="tags"><span class="tag">Live</span><span class="tag opt">Optional layer</span></div>
+  <div class="stack checks">
+    <div data-only="0">
+      <div class="check" data-from="0" style="--d:2.2s"><b>Benchmark first</b>Used only if it beats a simple seasonal forecast on history.</div>
+      <div class="check" data-from="0" style="--d:2.6s"><b>Ranges, not points</b>Every forecast carries its uncertainty band.</div>
+      <div class="check" data-from="0" style="--d:4.4s"><b>Scored afterward</b>Accuracy, bias and coverage of every past prediction.</div>
+    </div>
+    <div data-only="1">
+      <div class="check" data-from="1" style="--d:1.8s"><b>Placebo dates</b>No false effect where nothing changed.</div>
+      <div class="check" data-from="1" style="--d:2.4s"><b>Random variables</b>The estimate holds when noise is added.</div>
+      <div class="check" data-from="1" style="--d:3.0s"><b>Data subsets</b>The estimate holds on different slices of history.</div>
+    </div>
+  </div>
+  <div class="disclose">Illustrative series</div>
+  <aside class="notes">Step 0: an advanced forecast earns its place only by beating a simple seasonal benchmark on history; otherwise the simple one is used. Forecasts are ranges, and every prediction is scored afterward for accuracy, bias and coverage. Step 1: impact is measured against the pattern before the change, then attacked with placebo dates, random variables and different slices of data. These checks test assumptions; they don't replace sound study design.</aside>
+</section>
+
+<!-- 12 ─────────────────────────────────────────── -->
+<section class="slide s-trust" data-scene="trust" data-steps="1" data-title="Built to earn trust">
+  <div class="stack" style="left:120px; top:80px; width:1680px;">
+    <div data-only="0"><div class="kicker">Evidence</div><h2 class="h2">Every number knows <span class="g">where it came from.</span></h2></div>
+    <div data-only="1"><div class="kicker">Adoption</div><h2 class="h2">Run it in the shadows.<br><span class="g">Switch it on when it has earned trust.</span></h2></div>
+  </div>
+  <div class="tags"><span class="tag">Live</span></div>
+  <div data-only="0">
+    <div class="grade" style="left:360px">Estimate</div>
+    <div class="grade" style="left:660px">Stated</div>
+    <div class="grade" style="left:960px">Sampled</div>
+    <div class="grade" style="left:1260px; color:var(--gold)">System record</div>
+    <div class="grade" style="left:1560px; color:var(--gold-hi)">Controlled test</div>
+    <div class="abs" style="left:120px; right:120px; top:880px; text-align:center; font-size:24px; color:var(--ink-2)">Append-only history <span class="m">·</span> every calculation fingerprinted and reproducible <span class="m">·</span> demonstration data never mixes with real</div>
+  </div>
+  <div data-only="1">
+    <div class="switch" id="sw" data-pos="0"><span class="knob"></span><span class="opt">Off</span><span class="opt">Shadow</span><span class="opt">On</span></div>
+    <div class="swcap">
+      <div class="on"><b>Off</b>Nothing changes.</div>
+      <div><b>Shadow</b>It calculates quietly. Priorities stay untouched.</div>
+      <div><b>On</b>Economics shapes the ranking, at the strength leaders choose.</div>
+    </div>
+  </div>
+  <aside class="notes">Step 0: every input carries one of five evidence grades, from a rough estimate to a controlled test, and stronger evidence wins. Grades record where a number came from; they don't independently certify it. Step 1: adoption is a management decision. Run it in shadow first, compare its view with your own, and turn it on when it has earned trust. Large gaps between the model and the books raise warnings.</aside>
+</section>
+
+<!-- 13 ─────────────────────────────────────────── -->
+<section class="slide s-future" data-scene="future" data-steps="3" data-title="What comes next">
+  <div class="stack" style="left:120px; top:80px; width:1500px;">
+    <div data-only="0"><div class="kicker">The value-native enterprise</div><h2 class="h2">Tomorrow, every decision carries<br><span class="g">its economic consequence.</span></h2></div>
+    <div data-only="1"><div class="kicker">Uncertain futures</div><h2 class="h2">Choose plans that <span class="g">still work<br>when the world doesn't cooperate.</span></h2></div>
+    <div data-only="2"><div class="kicker">Capital and time</div><h2 class="h2">From operating profit<br>to <span class="g">capital allocation.</span></h2></div>
+    <div data-only="3"><div class="kicker">Evidence and industries</div><h2 class="h2">Smarter evidence.<br><span class="g">Every industry.</span></h2></div>
+  </div>
+  <div class="tags"><span class="tag road" id="fut-tag">Vision</span></div>
+  <div class="methods" data-only="0"><span>Everywhere</span><span>Every task</span><span>Every meeting</span><span>Every hire</span><span>Every investment</span></div>
+  <div class="methods" data-only="1"><span>Methods</span><span>Correlated Monte Carlo scenarios</span><span>Stochastic and robust optimization</span><span>Tail-risk measures (CVaR)</span></div>
+  <div class="methods" data-only="2"><span>Methods</span><span>Multi-period optimization</span><span>Mixed-integer decisions</span><span>Discounted cash flow</span><span>Real-options reasoning</span></div>
+  <div class="methods" data-only="3"><span>Methods</span><span>Multivariate forecasting with external drivers</span><span>Synthetic controls</span><span>Difference-in-differences</span><span>Bayesian updating</span><span>Value of information</span></div>
+  <div data-only="3">
+    <div class="ind live" style="left:420px; top:400px">Ship repair<small>Live today</small></div>
+    <div class="ind" style="left:780px; top:400px">Logistics<small>Candidate</small></div>
+    <div class="ind" style="left:1140px; top:400px">Manufacturing<small>Candidate</small></div>
+    <div class="ind" style="left:1500px; top:400px">Energy<small>Candidate</small></div>
+    <div class="ind" style="left:420px; top:580px">Healthcare<small>Candidate</small></div>
+    <div class="ind" style="left:780px; top:580px">Retail<small>Candidate</small></div>
+    <div class="ind" style="left:1140px; top:580px">Construction<small>Candidate</small></div>
+    <div class="ind" style="left:1500px; top:580px">Aviation<small>Candidate</small></div>
+    <div class="ind" style="left:420px; top:760px">Telecom<small>Candidate</small></div>
+    <div class="ind" style="left:780px; top:760px">Hospitality<small>Candidate</small></div>
+    <div class="ind" style="left:1140px; top:760px">Agriculture<small>Candidate</small></div>
+    <div class="ind" style="left:1500px; top:760px">Financial services<small>Candidate</small></div>
+  </div>
+  <aside class="notes">Step 0 is the vision: value measurement stops being a quarterly finance exercise and becomes the operating language of the company. Steps 1 to 3 are the technical roadmap, proposed directions rather than delivery commitments. Step 1: reason across many joint futures at once and pick plans that stay robust. Step 2: add implementation cost, timing, cash flow and budgets to move into capital allocation. Step 3: multivariate forecasting, stronger counterfactuals and value-of-information methods, with a growing library of validated industry models. One industry model is live today; each new sector needs domain expertise, financial reconciliation and pilot evidence.</aside>
+</section>
+
+<!-- 14 ─────────────────────────────────────────── -->
+<section class="slide s-close" data-scene="close" data-steps="2" data-title="Close">
+  <div class="center" data-only="0" style="top:120px"><h2 class="h2 xl">How much of your work is <span class="gr">gray?</span></h2></div>
+  <div class="center" data-only="1" style="top:170px">
+    <h2 class="h2 xl">Activity is not value.</h2>
+    <h2 class="h2" style="margin-top:18px">ValueGram Profit <span class="g">measures the difference.</span></h2>
+  </div>
+  <div class="center" data-only="1" style="top:800px"><p class="serif" style="font-size:42px; color:var(--ink-2)">See what it's worth. Decide with evidence. <span class="g">Prove what it delivered.</span></p></div>
+  <div class="center" data-only="2" style="top:230px">
+    <div class="kicker">The next step</div>
+    <h2 class="h2">Start with <span class="g">one decision you can measure.</span></h2>
+  </div>
+  <div class="path4" data-only="2">
+    <div class="st" style="left:360px"><small>01</small>One business process</div>
+    <div class="st" style="left:760px"><small>02</small>A clear financial baseline</div>
+    <div class="st" style="left:1160px"><small>03</small>A few connected goals</div>
+    <div class="st" style="left:1560px"><small>04</small>One measured outcome</div>
+  </div>
+  <div class="sig" data-only="2">ValueGram <em>Profit</em></div>
+  <aside class="notes">Step 0: leave the question in the room for a moment: how much of your work is gray? Step 1: activity is not value; ValueGram Profit measures the difference. Step 2: the invitation. Choose one process with a clear financial baseline and a few connected goals; agree the baseline, scope, measurement period and success criteria before any claim is made. With investors, discuss what it takes to validate repeatable deployments and grow the industry library.</aside>
+</section>
+
+</main>
+
+<div class="progress" style="width:0"></div>
+<div class="hud"><span class="snd"></span><span class="pos">01 / 14</span></div>
+<div class="help"><div class="card">
+  <div class="lbl">Controls</div>
+  <table>
+    <tr><td><kbd>→</kbd> <kbd>Space</kbd> click</td><td>Next step</td></tr>
+    <tr><td><kbd>←</kbd> click left third</td><td>Previous step</td></tr>
+    <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>A</kbd></td><td>Live control (slide 5)</td></tr>
+    <tr><td><kbd>F</kbd></td><td>Fullscreen</td></tr>
+    <tr><td><kbd>S</kbd></td><td>Sound on / off</td></tr>
+    <tr><td><kbd>P</kbd></td><td>Presenter view with notes</td></tr>
+    <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First / last slide</td></tr>
+    <tr><td><kbd>?</kbd></td><td>This help</td></tr>
+  </table>
+</div></div>
+<div class="rotate">Turn your phone sideways for the full experience.<br>Tap to continue.</div>
+
+<script src="assets/keyframes.js"></script>
+<script src="assets/sound.js"></script>
+<script src="assets/stage.js"></script>
+<script src="assets/scenes.js"></script>
+<script src="assets/deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presenter · ValueGram Profit</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+  @font-face { font-family: "Inter"; src: url("assets/fonts/inter-var.woff2") format("woff2"); font-weight: 100 900; }
+  :root { --bg: #06070a; --ink: #eef0f4; --ink-2: #b9c0cc; --mute: #7d8696; --gold: #f2b84b; --line: rgba(255,255,255,0.1); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: "Inter", system-ui, sans-serif; padding: 28px 32px; min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; gap: 22px; }
+  header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+  .now { font-size: 30px; font-weight: 600; letter-spacing: -0.01em; }
+  .meta { font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); margin-top: 8px; }
+  .timer { font-size: 44px; font-weight: 300; font-variant-numeric: tabular-nums; color: var(--gold); cursor: pointer; }
+  .notes { font-size: 24px; line-height: 1.55; color: var(--ink-2); max-width: 1000px; }
+  footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 16px; font-size: 16px; color: var(--mute); }
+  button { font: 600 15px Inter, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 14px 22px; cursor: pointer; margin-left: 10px; }
+  button:hover { border-color: var(--gold); color: var(--gold); }
+  .wait { color: var(--mute); font-size: 18px; }
+</style>
+</head>
+<body>
+  <header>
+    <div><div class="now" id="now">Waiting for the deck…</div><div class="meta" id="meta">Open the deck in another window</div></div>
+    <div class="timer" id="timer" title="Click to reset">00:00</div>
+  </header>
+  <div class="notes" id="notes"><p class="wait">Keep this window on your screen and the deck on the projector. Arrow keys work here too.</p></div>
+  <footer>
+    <div>Next: <span id="next">—</span></div>
+    <div><button id="snd">Sound</button><button id="prev">← Back</button><button id="nxt">Next →</button></div>
+  </footer>
+<script>
+  const chan = new BroadcastChannel('vg-profit-deck');
+  const $ = id => document.getElementById(id);
+  let t0 = Date.now();
+  chan.onmessage = e => {
+    const d = e.data || {};
+    if (d.type !== 'state') return;
+    $('now').textContent = d.title;
+    $('meta').textContent = `Slide ${d.i + 1} of ${d.total} · Step ${d.step + 1} of ${d.max + 1}`;
+    $('notes').textContent = d.notes;
+    $('next').textContent = d.next;
+  };
+  const cmd = c => chan.postMessage({ type: 'cmd', cmd: c });
+  $('nxt').onclick = () => cmd('next');
+  $('prev').onclick = () => cmd('prev');
+  $('snd').onclick = () => cmd('sound');
+  $('timer').onclick = () => { t0 = Date.now(); };
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight', ' ', 'PageDown', 'Enter'].includes(e.key)) { e.preventDefault(); cmd('next'); }
+    if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); cmd('prev'); }
+  });
+  setInterval(() => {
+    const s = Math.floor((Date.now() - t0) / 1000);
+    $('timer').textContent = String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+  }, 500);
+  chan.postMessage({ type: 'hello' });
+</script>
+</body>
+</html>

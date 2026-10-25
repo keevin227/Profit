@@ -1,4 +1,6 @@
-# ValueGram Profit: presentation script (v2, for approval)
+# ValueGram Profit: presentation script (v2)
+
+> **Note:** the built deck condenses this 24-slide script into 14 animated scenes. The on-screen text and current speaker notes live in [`site/index.html`](../site/index.html); this document remains the long-form source for wording and claim boundaries.
 
 **Audience:** enterprise executives and investors
 **Length:** 24 slides, about 20 minutes
